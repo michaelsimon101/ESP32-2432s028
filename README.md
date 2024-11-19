@@ -3,6 +3,51 @@
 This repository contains some experimental setup for using the esp32-2432s028 develoment board with tft display within Home Assistant.
 Only a few gpio pins are exposed and usable, but by using I²C you could use a MCP23017 module to add additional ports.
 
+## PINOUT
+### Display
+TFT_RST  -1
+TFT_SCK  GPIO14
+TFT_RS  GPIO02
+TFT_CS  GPIO15
+TFT_SDI  GPIO13
+TFT_SDO  GPIO12
+TFT_LED  GPIO21
+
+### Touchscreen XPT2046
+TP_CLK  GPIO25
+TP_CS  GPIO33
+TP_DIN  GPIO32
+TP_OUT  GPIO39
+TP_IRQ  GPIO36
+
+### RGB LED
+LED1 (blue)  GPIO17
+LED2 (red)  GPIO04
+LED3 (green) GPIO16
+
+### SD-Card
+TF_CS  GPIO05
+TF_MOSI  GPIO23
+TF_CLK  GPIO18
+TF_MISO  GPIO19
+
+## CONNECTORS
+### P1 (serial port)
+5V Input
+RX  GPIO34
+TX  GPIO35
+GND
+
+### P3
+GND
+GPIO35
+GPIO22
+GPIO21
+
+### P4 Speaker
+CH1
+CH2
+
 ## Hardware
 ### Wiring esp32-2432s028 + BME280 sensor
 All credits for extended pinout explanation go to macsbug, see more on: https://macsbug.wordpress.com/2022/08/17/esp32-2432s028/
